@@ -1,11 +1,11 @@
 <?php
 
-class Connection
+class database
 {
     public static function GetConnection()
     {
-        $host = "localhost";
-        $database_name = "scandiweb";
+        $host = "";
+        $database_name = "";
         $username = "";
         $password = "";
         $conn = null;
@@ -18,5 +18,15 @@ class Connection
         return $conn;
     }
 
+    public static function EXCQuery($query, $params = [])
+    {
+        $statement = self::GetConnection()->prepare($query);
+        $check = $statement->execute($params);
+        if (explode(' ', $query)[0] == "SELECT") {
+            return $statement->fetchAll();
+        } else {
+            return $check;
+        }
+    }
 }
 

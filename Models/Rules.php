@@ -31,7 +31,7 @@ class Rules
     public function unique($val, $key)
     {
         $sql = "SELECT COUNT(*) sku from products WHERE sku ='" . $val . "'";
-        $database = new Connection();
+        $database = new database();
         $db = $database->getConnection();
         $count = $db->prepare($sql);
         $count->execute();

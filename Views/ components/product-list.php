@@ -1,4 +1,4 @@
-<?php require_once(__DIR__ . '/../layouts/navbar/navbar.php') ?>
+<?php require_once(__DIR__ . '/../layouts/navbar.php') ?>
 <?php require_once(__DIR__ . '/../../Controllers/ProductController.php') ?>
 
 <body class="d-flex flex-column" style="min-height: 100vh">
@@ -28,6 +28,6 @@
         </div>
     </form>
 </main>
-<?php require_once(__DIR__ . '/../../scripts/scripts.php') ?>
+<?php require_once(__DIR__ . '/../scripts/scripts.php') ?>
 <?php require_once(__DIR__ . '/../layouts/footer.php') ?>
 </body>

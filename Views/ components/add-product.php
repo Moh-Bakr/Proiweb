@@ -1,5 +1,5 @@
-<?php require_once(__DIR__ . '/../layouts/navbar/navbar.php') ?>
-<?php require_once(__DIR__ . '/../../scripts/validator.php') ?>
+<?php require_once(__DIR__ . '/../layouts/navbar.php') ?>
+<?php require_once(__DIR__ . '/../scripts/validator.php') ?>
 <body class="d-flex flex-column" style="min-height: 100vh">
 <main style="flex: 1">
     <form action="add-product" method="POST" id="product_form" class="py-4">
@@ -163,6 +163,6 @@
             </div>
     </form>
 </main>
-<?php require_once(__DIR__ . '/../../scripts/scripts.php') ?>
+<?php require_once(__DIR__ . '/../scripts/scripts.php') ?>
 <?php require_once(__DIR__ . '/../layouts/footer.php') ?>
 </body>

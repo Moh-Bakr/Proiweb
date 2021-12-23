@@ -1,13 +1,12 @@
 <?php
-require_once(__DIR__ . '/../Requests/AddProductRequest.php');
+require_once(__DIR__ . '/ProductRequest.php');
 require_once(__DIR__ . '/Rules.php');
-require_once(__DIR__ . '/../Core/Connection.php');
+require_once(__DIR__ . '/database.php');
 
-class validator
+class validator extends ProductRequest
 {
-    private $data;
+    public $data;
     private $Rules;
-    private static $fields = [];
 
     public function __construct($post_data)
     {
@@ -17,22 +16,15 @@ class validator
 
     public function validateform()
     {
-        foreach (self::$fields as $field) {
-            if (!array_key_exists($field, $this->data)) {
-                echo '<div class="error text-danger text-md-center font-weight-bold ">'
-                    . "$field is not found " . "<br/>" . '</div>';
-                return;
-            }
-        }
         $this->ValidateSku();
         $this->ValidateName();
         $this->ValidatePrice();
         $this->ProductType();
 
         if (empty($this->Rules->errors)) {
-            $db = Connection::GetConnection();
-            $S_Data = new AddProductRequest($this->data, $db);
-            $S_Data->createProducts();
+            $db = database::GetConnection();
+            parent::__construct($this->data);
+            ProductRequest::CreateProducts();
             header('Location: ' . '/');
         }
         return $this->Rules->errors;

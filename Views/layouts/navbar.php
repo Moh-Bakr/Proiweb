@@ -1,5 +1,5 @@
 <head>
-    <?php require_once(__DIR__ . '/../cdn.php') ?>
+    <?php require_once(__DIR__ . '/cdn.php') ?>
     <title>Scandiweb-Task</title>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
