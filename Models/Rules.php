@@ -1,6 +1,7 @@
 <?php
+require_once(__DIR__ . '/RulesInterface.php');
 
-class Rules
+class Rules implements iRules
 {
     public $errors = [];
 
