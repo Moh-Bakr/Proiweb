@@ -1,5 +1,6 @@
 <?php
 require_once(__DIR__ . '/RulesInterface.php');
+require_once(__DIR__ . '/Product_Types/Furniture.php');
 
 class Rules implements iRules
 {
@@ -66,6 +67,8 @@ class Rules implements iRules
                 $this->digits($width, "width");
             }
         }
+//        $furniture = new Furniture($length, $height, $width);
+//        $furniture->validate_HWL($length, $height, $width);
     }
 
     public function addError($key, $val)
