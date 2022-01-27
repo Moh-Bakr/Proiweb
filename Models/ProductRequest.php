@@ -29,21 +29,20 @@ abstract class ProductRequest extends database
         return database::EXCQuery($query);
     }
 
-
-    public  function Get_DVD($Size)
-    {
-        $this->size = $Size ?? NULL;
-    }
-    public  function Get_weight($Weight)
-    {
-        $this->Weight = $Weight ?? NULL;
-    }
-    public  function Get_HWL($Length, $Width, $Height)
-    {
-        $this->length = $Length ?? NULL;
-        $this->width = $Width ?? NULL;
-        $this->Height = $Height ?? NULL;
-    }
+//    public  function Get_DVD($Size)
+//    {
+//        $this->size = $Size ?? NULL;
+//    }
+//    public  function Get_weight($Weight)
+//    {
+//        $this->Weight = $Weight ?? NULL;
+//    }
+//    public  function Get_HWL($Length, $Width, $Height)
+//    {
+//        $this->length = $Length ?? NULL;
+//        $this->width = $Width ?? NULL;
+//        $this->Height = $Height ?? NULL;
+//    }
 
     public function CreateProducts()
     {

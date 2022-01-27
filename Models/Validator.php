@@ -78,8 +78,8 @@ class validator extends ProductRequest
             $this->Rules->addError('type', 'Type is Required');
         } elseif ($val == 'DVD') {
             if (!($this->Rules->required($size, "size"))) {
-                if (!($this->Rules->max($this->size, "size", 5))) {
-                    $this->Rules->digits($this->size, "size");
+                if (!($this->Rules->max($size, "size", 5))) {
+                    $this->Rules->digits($size, "size");
                 }
             }
             //        $dvd = new DVD($size);
