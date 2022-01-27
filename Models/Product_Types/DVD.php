@@ -4,8 +4,7 @@ require_once(__DIR__ . '../Rules.php');
 
 class DVD extends ProductRequest
 {
-    public $size;
-    private $Rules;
+    public $size, $Rules;
 
     public function __construct($size)
     {
@@ -22,7 +21,7 @@ class DVD extends ProductRequest
             }
         }
     }
-    
+
 // Another method if we want after validation of the data that associated with the dvd (size)
 // and to send this data to the main product class directly we will create a function in product class
 // then send this data to the main class

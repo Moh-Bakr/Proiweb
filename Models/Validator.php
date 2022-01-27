@@ -1,6 +1,7 @@
 <?php
 require_once(__DIR__ . '/ProductRequest.php');
-require_once(__DIR__ . '/DVD.php');
+require_once(__DIR__ . '/Product_Types/DVD.php');
+require_once(__DIR__ . '/Product_Types/Book.php');
 require_once(__DIR__ . '/Rules.php');
 require_once(__DIR__ . '/database.php');
 
@@ -79,16 +80,18 @@ class validator extends ProductRequest
             if (!($this->Rules->required($size, "size"))) {
                 if (!($this->Rules->max($this->size, "size", 5))) {
                     $this->Rules->digits($this->size, "size");
-                    $dvd = new DVD($size);
-//                    $dvd->validate_size();
                 }
             }
+            //        $dvd = new DVD($size);
+            //        $dvd->validate_size();
         } elseif ($val == 'Book') {
             if (!($this->Rules->required($weight, "weight"))) {
                 if (!($this->Rules->max($weight, "weight", 5))) {
                     $this->Rules->digits($weight, "weight");
                 }
             }
+//            $book = new Book($weight);
+//            $book->validate_weight();
         } elseif ($val == 'Furniture') {
             $this->Rules->Furniture($length, $height, $width);
         }
