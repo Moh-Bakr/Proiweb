@@ -30,7 +30,7 @@ class Book extends ProductRequest
 //        if (!($this->Rules->required($this->weight, "weight"))) {
 //            if (!($this->Rules->max($this->weight, "weight", 5))) {
 //                $this->Rules->digits($this->weight, "weight");
-//                parent::Get_weight($this->size);
+//                parent::Get_weight($this->weight);
 //            }
 //        }
 //    }
