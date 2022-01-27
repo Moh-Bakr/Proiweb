@@ -1,5 +1,6 @@
 <?php
 require_once(__DIR__ . '/ProductRequest.php');
+require_once(__DIR__ . '/DVD.php');
 require_once(__DIR__ . '/Rules.php');
 require_once(__DIR__ . '/database.php');
 
@@ -22,12 +23,12 @@ class validator extends ProductRequest
         $this->ProductType();
 
         if (empty($this->Rules->errors)) {
-            $db = database::GetConnection();
             parent::__construct($this->data);
             ProductRequest::CreateProducts();
             header('Location: ' . '/');
         }
         return $this->Rules->errors;
+
     }
 
     private function ValidateSku()
@@ -76,8 +77,10 @@ class validator extends ProductRequest
             $this->Rules->addError('type', 'Type is Required');
         } elseif ($val == 'DVD') {
             if (!($this->Rules->required($size, "size"))) {
-                if (!($this->Rules->max($size, "size", 5))) {
-                    $this->Rules->digits($size, "size");
+                if (!($this->Rules->max($this->size, "size", 5))) {
+                    $this->Rules->digits($this->size, "size");
+                    $dvd = new DVD($size);
+//                    $dvd->validate_size();
                 }
             }
         } elseif ($val == 'Book') {
@@ -91,3 +94,4 @@ class validator extends ProductRequest
         }
     }
 }
+

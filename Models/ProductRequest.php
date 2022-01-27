@@ -6,8 +6,8 @@ require_once(__DIR__ . '/../Views/scripts/Autoload.php');
 abstract class ProductRequest extends database
 {
     private static $db_table = "products";
-    private $sku, $name, $price, $type
-    , $size, $weight, $height, $width, $length;
+    public $sku, $name, $price, $type, $size
+    , $weight, $height, $width, $length;
 
     public function __construct($data)
     {
@@ -21,6 +21,7 @@ abstract class ProductRequest extends database
         $this->width = $data['width'] ?? NULL;
         $this->length = $data['length'] ?? NULL;
     }
+
 
     public static function AllProducts()
     {

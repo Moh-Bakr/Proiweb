@@ -4,10 +4,10 @@ class database
 {
     public static function GetConnection()
     {
-        $host = "";
-        $database_name = "";
-        $username = "";
-        $password = "";
+        $host = "localhost";
+        $database_name = "scandiweb";
+        $username = "bakr";
+        $password = "060022898";
         $conn = null;
         try {
             $conn = new PDO("mysql:host=" . $host . ";dbname=" . $database_name, $username, $password);
