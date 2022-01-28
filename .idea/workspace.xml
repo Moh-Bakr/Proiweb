@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb3f2c97-714d-486f-ad45-6f7725ef46b5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Models/ProductRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ProductRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Product_Types/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Product_Types/Book.php" afterDir="false" />
-    </list>
+    <list default="true" id="fb3f2c97-714d-486f-ad45-6f7725ef46b5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +58,7 @@
       <workItem from="1641219004307" duration="49000" />
       <workItem from="1643293176628" duration="50000" />
       <workItem from="1643293345358" duration="12658000" />
-      <workItem from="1643316664784" duration="5094000" />
+      <workItem from="1643316664784" duration="5290000" />
     </task>
     <servers />
   </component>
